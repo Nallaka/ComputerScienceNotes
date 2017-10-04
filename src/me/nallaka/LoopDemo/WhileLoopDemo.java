@@ -31,5 +31,25 @@ public class WhileLoopDemo {
         //digit = 1; start = 0; result = 54320; result = 54321;
 
         System.out.println(result);
+
+        String abc = "abcdefg";
+        String res = "";
+        while (abc.length() > 0) {
+            res += abc.substring(abc.length() - 1);
+            abc = abc.substring(0, abc.length() - 1);
+            System.out.println(abc + "   " + res);
+        }
+        System.out.println(res);
+
+        int total = 0;
+        int begin = 12345;
+
+        do {
+            total += (begin % 10);
+            begin /= 10;
+        } while (begin > 0);
+
+        System.out.println(total);
+
     }//end Main
 }//end WhileLoopDemo
